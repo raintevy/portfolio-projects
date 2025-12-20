@@ -197,6 +197,7 @@ nav a {
   grid-template-columns: 1.1fr 1fr;
   gap: 3rem;
   align-items: start;
+  margin-bottom: 4rem;
 }
 
 /* image styling */
@@ -212,10 +213,38 @@ nav a {
   max-width: 48ch;
 }
 
+.project-text h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
 .project-text p {
   line-height: 1.5;
   max-width: 48ch;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
+
+.results-section {
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.results-section h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.results-section video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
 
 /* ---------- RESPONSIVE ---------- */
 

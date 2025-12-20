@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>matcha</title>
+  <title>Line-Reading Car</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -12,13 +12,10 @@
 <header>
   <nav>
     <ul>
-
-      <!-- Home -->
       <li><a href="https://raintevy.github.io/">rain’s station</a></li>
-      
-      <!-- Professional dropdown -->
+
       <li class="dropdown">
-        <a href="#">professional</a>
+        <a href="#">portfolio</a>
         <ul class="dropdown-menu">
           <li><a href="#">about me</a></li>
           <li><a href="#">resume</a></li>
@@ -27,7 +24,6 @@
         </ul>
       </li>
 
-      <!-- Personal dropdown -->
       <li class="dropdown">
         <a href="#">personal</a>
         <ul class="dropdown-menu">
@@ -37,51 +33,73 @@
         </ul>
       </li>
 
-      <!-- Toggles -->
-      <li class="toggle">ភាសាខ្មែរ </li>
+      <li class="toggle">ភាសាខ្មែរ</li>
       <li class="toggle">dark mode</li>
-
     </ul>
   </nav>
 </header>
 
-<div class = "layout">
-  <div class = "intro">
-    <h1> Raingsey Tevy </h1>
-    <h2> Junior Electrical and Computer Engineering @ <br> University of Washington</h2>
+<main class="layout">
 
-  </div>
+  <section class="intro">
+    <h1>Raingsey Tevy</h1>
+    <h2>Junior Electrical and Computer Engineering<br>University of Washington</h2>
+  </section>
 
-  <div class = "projects">
+  <section class="projects">
 
-    <h1> Projects </h1>
+    <h1>Projects</h1>
     <ul>
-      <li><a href="#">Line-reading Car</a></li>
+      <li><a href="#">Line-Reading Car</a></li>
       <li><a href="#">Robotic Arm for People with Upper-Body Impairments</a></li>
       <li><a href="#">Tetris on a DE1_SoC Board</a></li>
       <li><a href="#">Synaptic Neuro Connections Using Python</a></li>
     </ul>
 
-  <h2>Line-Reading Car</h2>
+    <h2>Line-Reading Car</h2>
 
-  <div class="project-section">
+    <!-- OBJECTIVE -->
     <div class="project-detail">
-      <img src="./images/car-cad-model.png" alt="cad model" />
+      <img src="./images/car-cad-model.png" alt="CAD model of robot chassis">
 
       <div class="project-text">
         <h3>Objective</h3>
         <p>
           The purpose of this project was to design a line-following robot.
-          We used skills like PCB design, 3-D printing, soldering, Arduino
-          coding, and general wiring...
+          We used skills like PCB design, 3-D printing, soldering, Arduino coding,
+          and general wiring. We printed our chassis, designed a PCB, and
+          implemented it on the robot.
         </p>
       </div>
     </div>
 
-  </div>
+    <!-- METHOD -->
+    <div class="project-detail">
+      <div class="project-text">
+        <h3>Method</h3>
+        <p>
+          We 3-D printed our chassis, designed a PCB, and assembled the system by
+          soldering resistors, LEDs, photoresistors, and header pins. The PCB was
+          mounted to a light shield on the chassis. Motors, batteries, and
+          potentiometers were wired to an Arduino and controlled using custom
+          line-following code.
+        </p>
+      </div>
 
-  </div>
-</div>
+      <img src="./images/car-pcb.png" alt="PCB layout">
+    </div>
+
+    <div class="results-section">
+      <h3>Results</h3>
+
+      <video autoplay muted loop playsinline>
+        <source src="./videos/car-video.mp4" type="video/mp4">
+      </video>
+    </div>
+
+
+  </section>
+</main>
 
 </body>
 </html>
