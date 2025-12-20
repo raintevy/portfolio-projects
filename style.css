@@ -131,15 +131,19 @@ nav a {
 }
 
 .intro h1 {
-  font-size: 3.5rem;   /* big name */
+  font-size: 3.5rem;  
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: 1rem;
 }
 
 .intro h2 {
-  font-size: 1.5rem;   /* big name */
+  font-size: 1.5rem; 
   font-weight: 500;
+}
+
+h2, h3 {
+  scroll-margin-top: 100px; 
 }
 
 /* ---------- PROJECTS LIST ---------- */
