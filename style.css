@@ -119,175 +119,123 @@ nav a {
   line-height: 1.2;
 }
 
-
-
-/* ---------- overall layout ---------- */
+/* INTRO SECTION */
 
 .layout {
-  display: flex;
   gap: 90px;
   padding: 40px;
 }
 
-/* ---------- sidebar ---------- */
-
-.sidebar {
-  width: 260px;
-  flex-shrink: 0;
+.intro {
+  margin-left: 1rem;
 }
 
-.sidebar img {
-  width: 100%;
-  height: auto;
-  margin-left: 15px;
-  margin-bottom: 25px;
+.intro h1 {
+  font-size: 3.5rem;   /* big name */
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1rem;
 }
 
-.music {
-  margin-bottom: 30px;
-  line-height: 1.4;
-  font-size: 1.3rem;
-}
-
-.sidebar h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-}
-
-.sidebar ol {
-  padding-left: 20px;
-  font-size: 1.1rem;
-  line-height: 1.6;
+.intro h2 {
+  font-size: 1.5rem;   /* big name */
   font-weight: 500;
 }
 
-/* ---------- introduction ---------- */
+/* ---------- PROJECTS LIST ---------- */
 
-.content {
-  max-width: 900px;
+.projects h1 {
+  margin-top: 3rem;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-.content h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.projects ul {
+  list-style: none;
+  line-height: 1.2rem;
+  padding: 0;
+  margin: 0 auto 4rem auto;
+  text-align: center;
+  max-width: 400px;
+  font-weight: 500;
 }
 
-.img0 {
-  position: absolute;
-  width: 300px;
-  height: auto;
-  top: 370px;
-  left: 800px;
-  z-index: 1;
+.projects li {
+  margin-bottom: 0.75rem;
 }
 
-
-.backstory {
-  font-weight:500;
-  line-height: 1.65;
-  margin-bottom: 35px;
+.projects a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.1rem;
 }
 
-.content h2 {
-  margin: 30px 0 10px;
-  font-size: 1.4rem;
-}
-
-.content h4 {
-  margin-top: 20px;
-  font-weight: 600;
-}
-
-.content ul {
-  margin-top: 6px;
-  margin-left: 20px;
-  line-height: 1.6;
-}
-
-.content a {
-  font-weight:500;
-  color: inherit;
+.projects a:hover {
   text-decoration: underline;
 }
 
-/* ---------- review section ---------- */
+/* ---------- PROJECT DETAIL ---------- */
 
-.section {
-  margin-top: 50px;
+.project-section h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-.details p {
-  margin: 2px 0;
-  line-height: 1.6;
-  max-width: 550px;
-  font-weight: 500;
+.projects h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: left;
 }
 
-.notes p {
-  margin: 20px 0;
-  line-height: 1.6;
-  max-width: 550px;
-  font-weight: 500;
+/* image + text layout */
+.project-detail {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
+  align-items: start;
 }
 
-.review-block {
-  position: relative;
-  padding-top: 25px;
-  padding-right: 260px;
+/* image styling */
+.project-detail img {
+  width: 100%;
+  border-radius: 6px;
 }
 
-
-/* images */
-.image-stack {
-  position: absolute;
-  right: 0;
-  top: 40px;
-  width: 260px;
-  height: 220px;
+/* description text */
+.project-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 48ch;
 }
 
-/* shared image style */
-.stack-img {
-  position: absolute;
-  height: auto;
+.project-text p {
+  line-height: 1.5;
+  max-width: 48ch;
 }
 
-/* front tin */
-.img-1 {
-  top: -25px;
-  left: 575px;
-  width: 275px;
-  transform: rotate(15deg);
-  z-index: 2;
-}
+/* ---------- RESPONSIVE ---------- */
 
-/* back tin */
-.img-2 {
-  top: 50px;
-  left: 700px;
-  width: 250px;
-  transform: rotate(-15deg);
-  z-index: 1;
-}
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding: 3rem 2rem;
+  }
 
-.aiya-top {
-  top: -25px;
-  left: 575px;
-  width: 275px;
-  z-index: 2;
-}
+  .projects h1 {
+    text-align: left;
+  }
 
-.aiya-front {
-  top: 50px;
-  left: 700px;
-  width: 250px;
-  transform: rotate(-15deg);
-  z-index: 1;
-}
+  .projects ul {
+    text-align: left;
+    margin-left: 0;
+  }
 
-.mizuba-front {
-  top: -110px;
-  left: 600px;
-  width: 350px;
-  z-index: 1;
+  .project-detail {
+    grid-template-columns: 1fr;
+  }
 }
