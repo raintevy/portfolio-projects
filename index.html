@@ -52,7 +52,7 @@
     <ul>
       <li><a href="#line-reading-car">Line-Reading Car</a></li>
       <li><a href="#robot-arm">Robotic Arm for People with Upper-Body Impairments</a></li>
-      <li><a href="#">Tetris on a DE1_SoC Board</a></li>
+      <li><a href="#tetris-board">Tetris on a DE1_SoC Board</a></li>
       <li><a href="#">Synaptic Neuro Connections Using Python</a></li>
     </ul>
 
@@ -108,9 +108,9 @@
 
     <h2 id="robot-arm">Robotic Arm for People with Upper Body Impairments</h2>
 
-    <!-- OBJECTIVE -->
     <section class="two-col">
       <div class="col">
+        <!-- OBJECTIVE -->
         <h2>Objective</h2>
         <img src="./images/robot-arm-horizontal-prototype.png" alt="Objective model" />
         <p>
@@ -119,6 +119,7 @@
       </div>
 
       <div class="col">
+        <!-- METHOD -->
         <h2>Method</h2>
         <img src="./images/vertical_prototype.PNG" alt="Method model" />
         <p>
@@ -127,6 +128,70 @@
       </div>
     </section>
 
+    <div class="project-detail">
+      <img
+        src="./images/robotic-arm.JPG"
+        alt="robot arm"
+        class="robot-arm-result"
+      />
+
+
+      <div class="project-text">
+        <h3>Results</h3>
+        <p>
+          The purpose of this project was to design a line-following robot.
+          We used skills like PCB design, 3-D printing, soldering, Arduino coding,
+          and general wiring. We printed our chassis, designed a PCB, and
+          implemented it on the robot.
+        </p>
+      </div>
+    </div>
+
+    <h2 id="tetris-board">Tetris on a DE1_SoC Board</h2>
+
+    <!-- OBJECTIVE -->
+    <div class="project-detail">
+      <img src="./images/board-layout.jpg" alt="CAD model of robot chassis">
+
+      <div class="project-text">
+        <h3>Objective</h3>
+        <p>
+          The project will display the game Tetris on the 16x16 Bicolor LED Expansion Board. 
+        </p>
+      </div>
+    </div>
+
+    <!-- METHOD -->
+    <div class="project-detail">
+      <div class="project-text">
+        <h3>Method</h3>
+        <p>
+          We 3-D printed our chassis, designed a PCB, and assembled the system by
+          soldering resistors, LEDs, photoresistors, and header pins. The PCB was
+          mounted to a light shield on the chassis. Motors, batteries, and
+          potentiometers were wired to an Arduino and controlled using custom
+          line-following code.
+        </p>
+      </div>
+
+      <img src="./images/model-sim.png" alt="PCB layout">
+    </div>
+
+    <div class="results-section">
+      <h3>Results</h3>
+
+      <video autoplay muted loop playsinline>
+        <source src="./videos/tetris-demo.mp4" type="video/mp4">
+      </video>
+
+      <p>
+        Our line-following robot was successful at completing the competition track. 
+        Our robot took accurate and consistent photoresistor readings due to our 3-D printed light shield blocking out light fulling. 
+        This allowed the robot to be responsive to any turns in the black line. 
+        However, our light shield dragged on the ground as the robot moved, so our speed was reduced. 
+        Also, we had difficulty tuning our PID values to be close to ideal values, so our robot tended to have many oscillations as it followed the line.
+      </p>
+    </div>
 
   </section>
 </main>
