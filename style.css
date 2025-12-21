@@ -6,16 +6,27 @@
   --bg: #FFF;
 }
 
+body.dark {
+  --text: #FFF;
+  --bg: #000;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   font-family: "Inter", sans-serif;
-  color: var(--text);
-  background: var(--bg);
 }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  padding: 1em;
+}
+
 
 header {
   position: sticky;
@@ -24,10 +35,6 @@ header {
   background: var(--bg);
 }
 
-
-body {
-  padding: 1em;
-}
 
 /* ---------- navigation bar ---------- */
 
@@ -79,8 +86,8 @@ nav a {
   padding-left: 0.8em;
   margin: 0;
 
-  background: white;
-  border: 1px solid #ddd;
+  background: var(--bg);
+  border: 1px solid var(--bg);
   border-radius: 8px;
 
   min-width: 160px;
@@ -172,7 +179,7 @@ h2, h3 {
 
 .projects a {
   text-decoration: none;
-  color: #000;
+  color: var(--text);
   font-size: 1.1rem;
 }
 
