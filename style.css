@@ -191,7 +191,7 @@ h2, h3 {
 .projects h2 {
   font-size: 2.4rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   text-align: left;
 }
 
@@ -231,8 +231,10 @@ h2, h3 {
 }
 
 .results-section {
-  margin: 4rem auto;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers image + text horizontally */
+  text-align: center;    /* centers text itself */
 }
 
 .results-section h3 {
@@ -249,6 +251,71 @@ h2, h3 {
   margin: 0 auto;
 }
 
+.results-section p {
+  margin-top: 2.5rem;
+  line-height: 1.5;
+  max-width: 65ch;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 4.5rem;
+}
+
+/* ---------- two column layout ---------- */
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 50% / 50% */
+  width: 100%;
+  max-width: none;               /* IMPORTANT */
+  margin: 0 auto;
+}
+
+/* ---------- individual columns ---------- */
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 3rem;
+}
+
+/* ---------- headings ---------- */
+
+.col h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* ---------- images ---------- */
+
+.col img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 18px;
+  margin-bottom: 1.5rem;
+}
+
+/* Left column image (Objective) */
+.two-col .col:first-child img {
+  max-width: 630px;
+}
+
+/* Right column image (Method) */
+.two-col .col:last-child img {
+  max-width: 245px;
+}
+
+/* ---------- text ---------- */
+
+.col p {
+  max-width: 45ch;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
 
 /* ---------- RESPONSIVE ---------- */
 
@@ -271,4 +338,9 @@ h2, h3 {
   .project-detail {
     grid-template-columns: 1fr;
   }
+
+  .two-col {
+    grid-template-columns: 1fr;
+  }
 }
+
