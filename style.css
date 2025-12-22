@@ -3,12 +3,18 @@
 
 :root {
   --text: #000;
-  --bg: #FFF;
+  --bg: #fff;
+  --border: #ddd;
 }
 
 body.dark {
-  --text: #FFF;
+  --text: #fff;
   --bg: #000;
+  --border: #444;
+}
+
+body.dark .dropdown-menu {
+  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
 }
 
 * {
@@ -87,8 +93,10 @@ nav a {
   margin: 0;
 
   background: var(--bg);
-  border: 1px solid var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
   border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 
   min-width: 160px;
   z-index: 1000;
